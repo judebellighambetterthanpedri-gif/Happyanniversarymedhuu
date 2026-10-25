@@ -103,7 +103,7 @@ ul.dream li.done{text-decoration:line-through;opacity:.6}
 .scene>svg{position:absolute;inset:0;width:100%;height:100%;display:block;transform:scale(1.14);transform-origin:50% 72%}
 .scene.play>svg{animation:push 12s cubic-bezier(.2,.6,.2,1) forwards}
 @keyframes push{to{transform:scale(1)}}
-.scene::before,.scene::after{content:'';position:absolute;left:0;right:0;height:7%;background:#000;z-index:2}
+.scene::before,.scene::after{content:'';position:absolute;left:0;right:0;height:7%;background:#000;z-index:2;pointer-events:none}
 .scene::before{top:0}.scene::after{bottom:0}
 .vig{position:absolute;inset:0;z-index:1;pointer-events:none;background:radial-gradient(ellipse at 50% 55%,#0000 55%,#000b)}
 .ttl{position:absolute;left:0;right:0;bottom:.4%;z-index:3;text-align:center;font-family:'Caveat',cursive;font-size:1.2rem;color:var(--gold);opacity:0;pointer-events:none}
@@ -155,4 +155,6 @@ footer{margin-top:90px;text-align:center;font-size:.9rem;opacity:.7}
 @keyframes up{to{transform:translate(var(--dx,0),-130px) scale(1.4);opacity:0}}
 .fx.txt{font-family:'Caveat',cursive;font-size:1.6rem;color:var(--rose);font-weight:700}
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition-duration:.01s!important}}
+
+  
 
