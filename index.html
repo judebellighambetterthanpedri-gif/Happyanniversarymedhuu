@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Happy Anniversary, my love my everything 🙈🥹</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&family=Great+Vibes&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="lock">
+  <div class="curtain l"></div><div class="curtain r"></div>
+  <div class="box" id="box">
+    <div style="font-size:2.4rem">🎬🔒</div>
+    <h2>only you can see 🤭</h2>
+    <p>special password.</p>
+    <input id="code" type="password" placeholder="Hint: propose date" autocomplete="off" aria-label="Secret code">
+    <button onclick="unlock()">Open the surprise</button>
+    <div id="err"></div>
+  </div>
+</div>
+
+<main id="app" class="hidden">
+  <section class="hero" style="margin-top:0">
+    <h1 id="title" aria-label="Happy Anniversary"></h1>
+    <p class="sub">A small effort to make you smile 🤭scroll down bubuu and see 🙈🥹.</p>
+    <div class="env">
+      <button class="seal" onclick="openLetter(this)"><i>💌</i><span><b>letter for you puchkii </b><br><small>open it na bubu</small></span></button>
+      <div class="paper" id="paper"><div><div class="letter hand" id="letter"></div></div></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>hehee 🥹 we've spent this much time together</h2>
+    <p class="sub" id="since"></p>
+    <div class="clock">
+      <div><b id="d">0</b><span>days</span></div><div><b id="h">0</b><span>hours</span></div>
+      <div><b id="m">0</b><span>minutes</span></div><div><b id="s">0</b><span>seconds</span></div>
+    </div>
+    <p class="next" id="next"></p>
+  </section>
+
+  <section>
+    <h2>you and me 🙈🥹🤭</h2>
+    <p class="sub">I'm tigeruu and you're catu .</p>
+    <div class="stage" id="stage">
+      <button class="who tig" data-w="tiger" aria-label="Tiger"><span data-char="tiger"></span></button>
+      <button class="who cat" data-w="cat" aria-label="Cat"><span data-char="cat"></span></button>
+    </div>
+    <p class="reason" id="say">tap on me or yourself 🤭🥹👆</p>
+  </section>
+
+  <section>
+    <h2>10 stars for my moon</h2>
+    <p class="sub">touch each star.</p>
+    <div class="sky" id="sky"><svg viewBox="0 0 100 100" preserveAspectRatio="none"><path id="hpath" pathLength="1"/></svg></div>
+    <p class="reason" id="reason">choose first star jii 🥰🙈🤭✨</p>
+    <p class="prog" id="prog">0 / 10 twinkle</p>
+  </section>
+
+  <section>
+    <h2>lobb meee</h2>
+    <p class="sub">tap the button and see love meter medhu 😚🤭.</p>
+    <div class="row">
+      <button class="btn" onclick="love('🤗','Hug')">🫂Hug me</button>
+      <button class="btn alt" onclick="love('😘','Kiss')">😘 Kiss me</button>
+    </div>
+    <div class="meter"><i id="fill"></i></div>
+    <p class="pct" id="pct">Pyaar meter: 0%</p>
+  </section>
+
+  <section>
+    <h2>We and our cute cute babies 🤭🥹🙈</h2>
+    <p class="sub">uss one day 🥹🥹🙈🙈</p>
+    <div class="scene" id="scene"><div class="vig"></div><div class="ttl">our family 👉🏻👈🏻🥹🙈</div></div>
+    <div class="row" style="margin-top:16px"><button class="btn alt" id="nbtn">🌙 Raat karo</button></div>
+    <p class="reason" id="say2">touch anyone 👆</p>
+  </section>
+
+  <section>
+    <h2>Jab kabhi...</h2>
+    <p class="sub">for you medhuu 🤭🙈.</p>
+    <div class="jab" id="jab"></div>
+  </section>
+
+  <section class="vow" id="vow"><div class="halo"></div>
+    <p class="vow-sm">Aur sabse zaroori baat</p>
+    <h2 class="vow-t" id="vowt" aria-label="I genuinely love you"><span class="a">I <mark>genuinely</mark></span><span class="b">love you</span></h2>
+    <svg class="scr" viewBox="0 0 300 18" aria-hidden="true"><path pathLength="1" d="M4 11Q38 2 78 10T158 9T230 10T296 7"/></svg>
+    <p class="sub" style="margin:18px auto 0">I'll never break your trust medhuu I'll be forever yours .</p>
+  </section>
+  <footer>made for my love my bubuu my medhu my mommyy my everything ❤️</footer>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
+
