@@ -130,6 +130,13 @@ const SC=`<svg viewBox='0 0 400 480'><defs><linearGradient id='sk' x1='0' y1='0'
 +`<rect id='nt' width='400' height='480' fill='#050318'/><g id='lg'><circle class='fl' cx='46' cy='418' r='54' fill='url(#lgl)'/></g><ellipse cx='200' cy='416' rx='152' ry='30' fill='#8c2d4a'/><ellipse cx='200' cy='416' rx='134' ry='22' fill='none' stroke='#ffd9a0' stroke-width='2' stroke-dasharray='6 6' opacity='.6'/><rect x='40' y='408' width='12' height='16' rx='3' fill='#ffcf6b'/><path d='M42 408q4-9 8 0' stroke='#7a4a22' stroke-width='2' fill='none'/>`
 +nx('tiger',84,262,116,136,'','tiger')+nx('cat',198,262,116,136,'','cat')+nx('tiger',90,352,66,77,bow('#ff7fb0'),'t1')+nx('tiger',167,364,62,72,cap,'boy')+nx('cat',244,352,66,77,bow('#b69cff'),'t2')+ff+`</svg>`;
 const scn=$('scene');scn.insertAdjacentHTML('afterbegin',SC);
+const LN={
+  tiger:['Mai tumse bahut pyaar krta hu medhu 🥰','Meri jaan ho tum 🫂🥺','Hamesha tumhara hi rahunga 💗'],
+  cat:['Mujhe bhi tumse bahut pyaar hai 🥰😚','Tum mere ho, sirf mere 🙈','Ill always be only yours too bubuu 💗'],
+  t1:['Papa mummy ko bahut pyaar karte hain 🥹','Mummy sabse achhi hain 🙈💗'],
+  t2:['Mummy papa best hain 🥰','Hum sab saath hain 🫂💗'],
+  boy:['Main sabka chhota sa superstar hu 😎💙','Papa mummy I love you 🥹💗']
+};
 const li={};
 scn.addEventListener('click',e=>{const g=e.target.closest('[data-who]');if(!g)return;const w=g.dataset.who,k=li[w]=(li[w]||0)+1;$('say2').textContent=LN[w][(k-1)%LN[w].length];tone({tiger:196,cat:659,t1:784,t2:880,boy:1047}[w],'triangle',.3);const r=g.getBoundingClientRect();for(let i=0;i<3;i++)setTimeout(()=>fx('💗',r.left+r.width/2+rnd(-20,20),r.top),i*100)});
 $('nbtn').onclick=()=>{const n=scn.classList.toggle('night');$('nbtn').textContent=n?'🌅 Day':'🌙 Night';[392,523,659].forEach((f,i)=>setTimeout(()=>tone(f,'sine',.8,.1),i*160))};
@@ -141,3 +148,4 @@ new IntersectionObserver((en,o)=>en.forEach(x=>{if(x.isIntersecting){vow.classLi
 $('vowt').onclick=()=>{[523,659,784,1047,1319].forEach((f,i)=>setTimeout(()=>tone(f,'sine',1.1,.12),i*110));const r=$('vowt').getBoundingClientRect();for(let i=0;i<10;i++)setTimeout(()=>fx(['💖','✨','❤️'][i%3],r.left+rnd(20,r.width-20),r.top+r.height/2),i*80)};
 // tap hearts
 document.addEventListener('pointerdown',e=>{if($('app').classList.contains('hidden')||e.target.closest('.star'))return;fx('I love you ❤️',e.clientX-40,e.clientY-20,'txt')});
+                        
