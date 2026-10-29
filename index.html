@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Happy Anniversary, my love my everything 🙈🥹</title>
+<title>Happy Anniversary Medhuuu 💖</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&family=Great+Vibes&display=swap" rel="stylesheet">
@@ -25,10 +25,17 @@
 
 <main id="app" class="hidden">
   <section class="hero" style="margin-top:0">
-    <h1 id="title" aria-label="Happy Anniversary"></h1>
+    <div class="ttlwrap"><div class="bigheart" aria-hidden="true"><svg viewBox="0 0 100 90"><path d="M50 85C10 55 0 35 0 22 0 9 10 0 24 0c10 0 20 6 26 16C56 6 66 0 76 0c14 0 24 9 24 22 0 13-10 33-50 63z"/></svg></div><h1 id="title" aria-label="Happy Anniversary Medhuuu"></h1></div>
     <p class="sub">A small effort to make you smile 🤭scroll down bubuu and see 🙈🥹.</p>
+    <div class="game">
+      <h3>🎮 Pehle ek chhota sa game</h3>
+      <p class="sub" style="margin:0 auto 10px">Girte hue 10 hearts pakdo, phir letter khulega 💌</p>
+      <div id="gbox"></div>
+      <div class="row" style="justify-content:center;align-items:center;margin-top:10px"><button class="btn" id="gstart">Start ▶</button><b id="gcount">0 / 10</b></div>
+      <p class="reason" id="gmsg" style="min-height:1.6em;margin-top:8px;font-size:1rem"></p>
+    </div>
     <div class="env">
-      <button class="seal" onclick="openLetter(this)"><i>💌</i><span><b>letter for you puchkii </b><br><small>open it na bubu</small></span></button>
+      <button class="seal locked" disabled onclick="openLetter(this)"><i>💌</i><span><b>letter for you puchkii </b><br><small id="sealtxt">🔒 game jeet kar kholo</small></span></button>
       <div class="paper" id="paper"><div><div class="letter hand" id="letter"></div></div></div>
     </div>
   </section>
@@ -50,7 +57,6 @@
       <button class="who tig" data-w="tiger" aria-label="Tiger"><span data-char="tiger"></span></button>
       <button class="who cat" data-w="cat" aria-label="Cat"><span data-char="cat"></span></button>
     </div>
-    <p class="reason" id="say">tap on me or yourself 🤭🥹👆</p>
   </section>
 
   <section>
@@ -77,7 +83,18 @@
     <p class="sub">uss one day 🥹🥹🙈🙈</p>
     <div class="scene" id="scene"><div class="vig"></div><div class="ttl">our family 👉🏻👈🏻🥹🙈</div></div>
     <div class="row" style="margin-top:16px"><button class="btn alt" id="nbtn">🌙 Raat karo</button></div>
-    <p class="reason" id="say2">touch anyone 👆</p>
+  </section>
+
+  <section>
+    <h2>📸 Our Gallery</h2>
+    <p class="sub">hamari pyaari yaadein 🥹</p>
+    <div class="gal" id="gal"></div>
+  </section>
+
+  <section>
+    <h2>🧠 Love &amp; Maths Quiz</h2>
+    <p class="sub">dekhte hain medhu kitni smart hai 😏 (a+b)² waale doston ke saath!</p>
+    <div class="quiz"><p class="prog" id="qprog"></p><div id="qbox"></div></div>
   </section>
 
   <section>
@@ -95,7 +112,10 @@
   <footer>made for my love my bubuu my medhu my mommyy my everything ❤️</footer>
 </main>
 
+<div id="lb" class="hidden"><img alt=""></div>
 <script src="script.js"></script>
 </body>
 </html>
+
+
 
